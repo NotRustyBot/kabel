@@ -1,0 +1,22 @@
+{
+  "name": "kabel",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host",
+    "upload": "npm run build && 7z a -tzip static.zip .\\dist\\* && butler push static.zip notrustybot/kabel:web",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "@types/howler": "^2.2.12",
+    "typescript": "~5.6.2",
+    "vite": "^6.0.1"
+  },
+  "dependencies": {
+    "howler": "^2.2.4",
+    "pixi-filters": "^6.0.5",
+    "pixi.js": "^8.6.2"
+  }
+}
